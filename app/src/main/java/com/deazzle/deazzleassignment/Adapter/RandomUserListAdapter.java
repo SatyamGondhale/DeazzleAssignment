@@ -41,7 +41,7 @@ public class RandomUserListAdapter extends RecyclerView.Adapter<RandomUserListAd
         holder.user_name.setText(user.getName().getFirst()+" "+ user.getName().getLast());
         holder.user_phone.setText(user.getPhone());
         holder.user_email.setText(user.getEmail());
-        Picasso.get().load(user.getPicture().getThumbnail()).placeholder(context.getResources().getDrawable(R.drawable.loading)).fit().centerCrop().into(holder.userImage);
+        Picasso.get().load(user.getPicture().getMedium()).placeholder(context.getResources().getDrawable(R.drawable.loading)).fit().centerCrop().into(holder.userImage);
         holder.liked.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
